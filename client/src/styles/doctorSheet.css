@@ -1,0 +1,495 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.doctor-sheet-container {
+  padding: 28px;
+  background: #f8fafc;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.search-bar button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.search-results {
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-result {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.search-result:hover {
+  background: #f1f5f9;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.registry-data,
+.doctor-data {
+  min-width: 0;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+
+.registry-data,
+.doctor-data {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.registry-data h3,
+.doctor-data h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 14px;
+}
+
+.doctor-data h3 {
+  margin-top: 18px;
+}
+
+.doctor-data h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+/* =========================
+   FIELD ROWS
+========================= */
+
+.field-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.field-row label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.field-row input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f9fafb;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.field-row input:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+}
+
+/* =========================
+   EXAMINATION
+========================= */
+
+.examination {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.examination > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.examination > div:last-child {
+  grid-column: span 2;
+}
+
+.examination label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #334155;
+}
+
+.examination textarea {
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 6px 8px;
+  font-size: 13px;
+  resize: none;
+  height: 26px;
+  background: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+.examination textarea:focus {
+  border-color: #3b82f6;
+}
+
+/* =========================
+   TEXTAREAS
+========================= */
+
+.doctor-data textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  background: #f9fafb;
+  outline: none;
+  transition: 0.2s;
+}
+
+.doctor-data textarea:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+}
+
+/* =========================
+   PRESCRIPTION INPUTS
+========================= */
+
+.doctor-data select,
+.doctor-data input[type="number"],
+.doctor-data input[type="text"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f9fafb;
+  margin-right: 6px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.doctor-data select:focus,
+.doctor-data input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+}
+
+/* =========================
+   PRESCRIPTION ROWS
+========================= */
+
+.doctor-data > div[style] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.doctor-data select,
+.doctor-data input[type="number"],
+.doctor-data input[type="text"] {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* =========================
+   SAVED PRESCRIPTIONS
+========================= */
+
+.doctor-data .prescription-card,
+.doctor-data div[style*="border"] {
+  border-radius: 12px !important;
+  padding: 12px !important;
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.doctor-data strong {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  transition: 0.2s;
+}
+
+.doctor-data button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Save Prescription button */
+.doctor-data button[style] {
+  background: #10b981;
+  color: white;
+}
+
+.doctor-data button[style]:hover {
+  background: #059669;
+}
+
+/* Add Medicine button */
+.doctor-data > button {
+  margin-top: 10px;
+  background: #6366f1;
+  color: white;
+}
+
+.doctor-data > button:hover {
+  background: #4f46e5;
+}
+
+/* Give Now and generic doctor-area buttons */
+.doctor-data button:not(.sheet-buttons button):not([style]) {
+  margin-top: 6px;
+  background: #3b82f6;
+  color: white;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.doctor-data button:not(.sheet-buttons button):not([style]):hover {
+  background: #2563eb;
+}
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.sheet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.sheet-buttons button {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.sheet-buttons button:nth-child(1) {
+  background: #3b82f6;
+}
+
+.sheet-buttons button:nth-child(2) {
+  background: #10b981;
+}
+
+.sheet-buttons button:nth-child(3) {
+  background: #6366f1;
+}
+
+.sheet-buttons button:nth-child(4) {
+  background: #f59e0b;
+}
+
+.sheet-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   REFERRAL
+========================= */
+
+.referral {
+  margin-top: 20px;
+}
+
+.referral-box {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.referral-box h3 {
+  color: #b45309;
+  margin-bottom: 10px;
+}
+
+.referral-box select,
+.referral-box textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #fcd34d;
+  background: #fffbeb;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.referral-box select:focus,
+.referral-box textarea:focus {
+  border-color: #f59e0b;
+  background: #ffffff;
+}
+
+.referral-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #f59e0b;
+  color: white;
+  font-weight: 600;
+}
+
+.referral-box button:hover {
+  background: #d97706;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .sheet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .sheet-buttons {
+    flex-direction: column;
+  }
+
+  .sheet-buttons button {
+    width: 100%;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .examination {
+    grid-template-columns: 1fr;
+  }
+
+  .examination > div:last-child {
+    grid-column: span 1;
+  }
+}
+
+.medicine-autocomplete {
+  position: relative;
+  width: 220px;
+}
+
+.medicine-dropdown {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.medicine-option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.medicine-option:hover {
+  background: #f1f5f9;
+}
